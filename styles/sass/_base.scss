@@ -1,19 +1,17 @@
 body{
-    background-image: url(../../images/55.jpg);
+    background-image: url(../../images/66.jpg);
     background-repeat: repeat-y;
     background-position: center;
     background-size: 100%;
     margin: 0;
+    padding: 0;
     &::before{
         content: "";
         position: absolute;
-        
         height: 100%;
         width: 100%;
         left: 0;
-        
-        z-index: 22;
-        
+        z-index: 1;
         background-image: url(../../images/gradient.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
