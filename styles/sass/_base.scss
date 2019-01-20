@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "WEST____";
+    src: url(../fonts/WEST____.TTF);
+    font-weight: 700;
+    font-style: normal;
+}
+
 body{
     background-image: url(../../images/66.jpg);
     background-repeat: repeat-y;
@@ -11,7 +18,7 @@ body{
         height: 100%;
         width: 100%;
         left: 0;
-        z-index: 1;
+        z-index: -1;
         background-image: url(../../images/gradient.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
