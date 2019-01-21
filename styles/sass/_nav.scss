@@ -1,6 +1,46 @@
 .navigation {
     width: 1200px;
-    height: 60px;
+    height: 240px;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 0px 5px;
+    font-family: "WEST____";
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+
+    
+    
+}
+.navigation__link{
+    text-decoration: none;
+    text-shadow: -1px -1px 1px #3b3b3b;
+    padding: 20px 0;
+    color: rgb(32, 17, 3);
+    font-size: 45px;
+    position: relative;
+    // width: 20%;
+    // display: inline-block;
+    flex: 0 0 20%;
+    align-self: center;
+    text-align: center;
+
+    &:hover{
+        color: rgb(148, 10, 10);
+        text-shadow: -1px -1px 1px #ffe3e3;
+    }
+}
+.navigation__link--logo{
+    width: 220px;
+    height: auto;
+
+}
+.navigation__logo-img{
+    width: auto;
+    height: 200px;
+}
+.navigation__btn{
+    display: none;
 }

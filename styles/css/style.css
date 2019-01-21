@@ -351,28 +351,91 @@ template {
 body {
   background-image: url(../../images/66.jpg);
   background-repeat: repeat-y;
-  background-position: center;
+  background-position: 0 150%;
   background-size: 100%;
   margin: 0;
   padding: 0;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  z-index: -1;
-  background-image: url(../../images/gradient.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
 }
 
 .navigation {
   width: 1200px;
-  height: 60px;
+  height: 240px;
   margin: 0 auto;
-  padding: 5px 5px;
+  padding: 0px 5px;
+  font-family: "WEST____";
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navigation__link {
+  text-decoration: none;
+  text-shadow: -1px -1px 1px #3b3b3b;
+  padding: 20px 0;
+  color: #201103;
+  font-size: 45px;
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+}
+
+.navigation__link:hover {
+  color: #940a0a;
+  text-shadow: -1px -1px 1px #ffe3e3;
+}
+
+.navigation__link--logo {
+  width: 220px;
+  height: auto;
+}
+
+.navigation__logo-img {
+  width: auto;
+  height: 200px;
+}
+
+.navigation__btn {
+  display: none;
+}
+
+.header {
+  height: 350px;
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  background-image: url(/images/uduzegokowboja.png);
+  background-position: bottom;
+  background-size: 95% auto;
+  background-repeat: no-repeat;
+}
+
+.about {
+  width: 1200px;
+  height: 550px;
+  top: -25px;
+  margin: 0px auto 10px;
+  position: relative;
+  background-image: url(../../images/paper2.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
 }
 /*# sourceMappingURL=style.css.map */

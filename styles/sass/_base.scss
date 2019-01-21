@@ -8,19 +8,21 @@
 body{
     background-image: url(../../images/66.jpg);
     background-repeat: repeat-y;
-    background-position: center;
+    background-position: 0 150%;
     background-size: 100%;
     margin: 0;
     padding: 0;
-    &::before{
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        left: 0;
-        z-index: -1;
-        background-image: url(../../images/gradient.png);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-    }
+    box-sizing: border-box;
+    position: relative;
+    // &::before{
+    //     content: "";
+    //     position: absolute;
+    //     height: 100%;
+    //     width: 100%;
+    //     left: 0;
+    //     z-index: -1;
+    //     background-image: url(../../images/gradient.png);
+    //     background-repeat: no-repeat;
+    //     background-size: 100% 100%;
+    // }
 }
