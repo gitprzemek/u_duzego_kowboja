@@ -348,6 +348,13 @@ template {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "OldStandard-Regular";
+  src: url(../fonts/OldStandard-Regular.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
 body {
   background-image: url(../../images/66.jpg);
   background-repeat: repeat-y;
@@ -358,6 +365,11 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
+}
+
+body * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .navigation {
@@ -421,21 +433,90 @@ body {
   width: 1200px;
   margin: 0 auto;
   position: relative;
-  background-image: url(/images/uduzegokowboja.png);
+  background-image: url(../../images/uduzegokowboja.png);
   background-position: bottom;
   background-size: 95% auto;
   background-repeat: no-repeat;
 }
 
+.header::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+  background-image: url(../../images/flame.png);
+  background-repeat: no-repeat;
+  background-size: 90% 100%;
+  background-position: bottom;
+}
+
 .about {
   width: 1200px;
-  height: 550px;
+  height: auto;
   top: -25px;
   margin: 0px auto 10px;
+  padding: 20px 50px;
   position: relative;
   background-image: url(../../images/paper2.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
+}
+
+.about__container {
+  width: 50%;
+  margin: 0 auto 0 20%;
+}
+
+.about__local-img {
+  margin: 40px 0 0px;
+  width: 70%;
+}
+
+.about__title {
+  margin: 10px 0 10px 0;
+  font-family: "WEST____";
+  font-size: 50px;
+  color: #a50000;
+  text-shadow: -1px 1px 1px #030303;
+}
+
+.about__text {
+  font-family: "OldStandard-Regular";
+  font-size: 18px;
+  color: #000000;
+}
+
+.about__btn-to-menu {
+  display: inline-block;
+  color: black;
+  border: 2px solid #494949;
+  padding: 5px 15px 0px;
+  margin-bottom: 40px;
+  font-size: 24px;
+  text-decoration: none;
+  font-family: "OldStandard-Regular";
+}
+
+.about__product-img1 {
+  position: absolute;
+  height: auto;
+  width: 370px;
+  bottom: 21%;
+  right: -10px;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+  -webkit-filter: drop-shadow(-3px 1px 15px #222);
+  filter: drop-shadow(0px 5px 10px rgba(34, 34, 34, 0.5));
+}
+
+.about__product-img2 {
+  position: absolute;
+  height: auto;
+  width: 220px;
+  top: 50px;
+  left: 30px;
 }
 /*# sourceMappingURL=style.css.map */
