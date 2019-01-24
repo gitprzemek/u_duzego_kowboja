@@ -355,6 +355,20 @@ template {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "AKENATEN";
+  src: url(../fonts/AKENATEN.TTF);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arvo";
+  src: url(../fonts/Arvo-Regular.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
 body {
   background-image: url(../../images/66.jpg);
   background-repeat: repeat-y;
@@ -395,9 +409,9 @@ body * {
 
 .navigation__link {
   text-decoration: none;
-  text-shadow: -1px -1px 1px #3b3b3b;
+  text-shadow: -1px -1px 1px #ffe3e3;
   padding: 20px 0;
-  color: #201103;
+  color: #a50000;
   font-size: 45px;
   position: relative;
   -webkit-box-flex: 0;
@@ -429,7 +443,7 @@ body * {
 }
 
 .header {
-  height: 350px;
+  height: 400px;
   width: 1200px;
   margin: 0 auto;
   position: relative;
@@ -448,7 +462,7 @@ body * {
   z-index: -1;
   background-image: url(../../images/flame.png);
   background-repeat: no-repeat;
-  background-size: 90% 100%;
+  background-size: 85% 90%;
   background-position: bottom;
 }
 
@@ -534,6 +548,80 @@ body * {
   margin: 0 auto 20px;
   padding: 0;
   position: relative;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: "WEST____";
+}
+
+.recommend__title {
+  font-family: "WEST____";
+  font-size: 50px;
+  color: #a50000;
+  text-shadow: -1px 1px 1px #030303;
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+
+.recommend__title::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 340px;
+  background-image: url(../../images/deska.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  top: 52%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.recommend__product {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%;
+  min-height: 400px;
+  width: 40%;
+  margin: 60px auto;
+  padding: 10px 10px;
+  color: white;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.recommend__frame {
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.recommend__prod-img {
+  height: 200px;
+  width: auto;
+  margin: 15px auto;
+}
+
+.recommend__prod-name {
+  font-size: 34px;
+  margin: 10px auto;
+}
+
+.recommend__prod-desc {
+  font-family: "Arvo";
+  font-size: 18px;
+  margin: 2px auto 10px;
+  padding: 0 10px;
 }
 /*# sourceMappingURL=style.css.map */

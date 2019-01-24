@@ -4,5 +4,64 @@
     margin: 0 auto 20px;
     padding: 0;
     position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: "WEST____";
+    // background-color: rgba(0, 0, 0, 0.5);
+}
+.recommend__title{
+    font-family: "WEST____";
+    font-size: 50px;
+    color: $red-color;
+    text-shadow: -1px 1px 1px #030303;
+    position: relative;
+    flex: 0 1 100%;
+    &::before{
+        content: "";
+        position: absolute;
+        height: 80px;
+        width: 340px;
+        background-image: url(../../images/deska.png);
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.recommend__product{
+    position: relative;
+    flex: 0 1 30%;
+    min-height: 400px;
+    width: 40%;
+    margin: 60px auto;
+    padding: 10px 10px;
+    color: white;
     background-color: rgba(0, 0, 0, 0.5);
+}
+.recommend__frame{
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.recommend__prod-img{
+    height: 200px;
+    width: auto;
+    margin: 15px auto;
+
+}
+.recommend__prod-name{
+    
+    font-size: 34px;
+    margin: 10px auto;
+}
+.recommend__prod-desc{
+    font-family: "Arvo";
+    font-size: 18px;
+    margin: 2px auto 10px;
+    padding: 0 10px;
 }
