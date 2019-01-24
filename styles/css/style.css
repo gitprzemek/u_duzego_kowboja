@@ -358,7 +358,7 @@ template {
 body {
   background-image: url(../../images/66.jpg);
   background-repeat: repeat-y;
-  background-position: 0 150%;
+  background-position: 0 40%;
   background-size: 100%;
   margin: 0;
   padding: 0;
@@ -455,7 +455,7 @@ body * {
 .about {
   width: 1200px;
   height: auto;
-  top: -25px;
+  top: -30px;
   margin: 0px auto 10px;
   padding: 20px 50px;
   position: relative;
@@ -500,6 +500,14 @@ body * {
   font-family: "OldStandard-Regular";
 }
 
+.about__btn-to-menu:hover {
+  border: 2px solid #a50000;
+  background-color: #a50000;
+  color: white;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
 .about__product-img1 {
   position: absolute;
   height: auto;
@@ -515,8 +523,17 @@ body * {
 .about__product-img2 {
   position: absolute;
   height: auto;
-  width: 220px;
-  top: 50px;
+  width: 170px;
+  top: 120px;
   left: 30px;
+}
+
+.recommend {
+  width: 1200px;
+  height: 500px;
+  margin: 0 auto 20px;
+  padding: 0;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 /*# sourceMappingURL=style.css.map */

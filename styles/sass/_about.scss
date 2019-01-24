@@ -1,7 +1,7 @@
 .about{
     width: 1200px;
     height: auto;
-    top: -25px;
+    top: -30px;
     margin: 0px auto 10px;
     padding: 20px 50px;
     position: relative;
@@ -22,7 +22,7 @@
     margin: 10px 0 10px 0;
     font-family: "WEST____";
     font-size: 50px;
-    color: rgb(165, 0, 0);
+    color: $red-color;
     text-shadow: -1px 1px 1px #030303;
 }
 .about__text{
@@ -40,6 +40,12 @@
     font-size: 24px;
     text-decoration: none;
     font-family: "OldStandard-Regular";
+    &:hover{
+        border: 2px solid $red-color; 
+        background-color: $red-color;
+        color: white;
+        transition: all 0.2s linear;
+    }
 }
 .about__product-img1{
     position: absolute;
@@ -55,8 +61,8 @@
 .about__product-img2{
     position: absolute;
     height: auto;
-    width: 220px;
-    top: 50px;
+    width: 170px;
+    top: 120px;
     left: 30px;    
     // transform: rotate(70deg);
     // -webkit-filter: drop-shadow(-3px 1px 15px #222 );
