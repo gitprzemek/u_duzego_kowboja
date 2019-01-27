@@ -379,6 +379,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
+  font-family: "Arvo";
 }
 
 body * {
@@ -627,7 +628,7 @@ body * {
 
 .menu {
   width: 1200px;
-  height: 1000px;
+  height: auto;
   margin: 80px auto 20px;
   padding: 0;
   position: relative;
@@ -685,7 +686,7 @@ body * {
   margin: 40px 0;
   font-family: "WEST____";
   font-size: 40px;
-  color: white;
+  color: #a50000;
   text-shadow: -1px 1px 1px #030303;
 }
 
@@ -748,7 +749,7 @@ body * {
   width: 100%;
   position: absolute;
   bottom: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .menu__prod-price {
@@ -765,5 +766,108 @@ body * {
   font-size: 20px;
   font-weight: 500;
   font-style: italic;
+}
+
+.delivery {
+  width: 1200px;
+  height: auto;
+  margin: 80px auto 20px;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+
+.delivery__title {
+  font-family: "WEST____";
+  font-size: 40px;
+  color: #a50000;
+  text-shadow: -1px 1px 1px #030303;
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+
+.delivery__title::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 460px;
+  background-image: url(../../images/deska.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  top: 52%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.delivery__container {
+  position: relative;
+  display: inline-block;
+  height: auto;
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+  margin: 60px auto;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.delivery__title {
+  margin: 40px 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+
+.delivery__cont-about {
+  font-size: 24px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+  line-height: 38px;
+}
+
+.delivery__desc {
+  font-family: "WEST____";
+  font-size: 38px;
+  margin: 10px auto;
+}
+
+.delivery__desc-gratis {
+  font-style: italic;
+}
+
+.delivery__phone {
+  text-decoration: none;
+  font-weight: 700;
+  color: #a50000;
+  text-shadow: -1px 1px 1px #fafafa;
+}
+
+.delivery__cont-cash {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.delivery__cash-img {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */
