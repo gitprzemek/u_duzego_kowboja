@@ -771,7 +771,7 @@ body * {
 .delivery {
   width: 1200px;
   height: auto;
-  margin: 80px auto 20px;
+  margin: 80px auto 120px;
   padding: 0;
   position: relative;
   text-align: center;
@@ -806,12 +806,11 @@ body * {
 
 .delivery__container {
   position: relative;
-  display: inline-block;
   height: auto;
   height: 100%;
   width: 100%;
   padding: 50px;
-  margin: 60px auto;
+  margin: 100px auto 100px;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
   display: -webkit-box;
@@ -832,6 +831,19 @@ body * {
       -ms-flex: 0 1 60%;
           flex: 0 1 60%;
   line-height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .delivery__desc {
@@ -869,5 +881,107 @@ body * {
   width: 70%;
   height: auto;
   margin: 0 auto;
+}
+
+.contact {
+  width: 1200px;
+  height: auto;
+  margin: 80px auto 0px;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+
+.contact__title {
+  font-family: "WEST____";
+  font-size: 40px;
+  color: #a50000;
+  text-shadow: -1px 1px 1px #030303;
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+
+.contact__title::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 500px;
+  background-image: url(../../images/deska.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  top: 52%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.contact__container {
+  position: relative;
+  height: auto;
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+  margin: 100px auto 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.904);
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.contact__element {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  margin: 5px;
+  position: relative;
+}
+
+.contact__element--map {
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.contact__hours-list {
+  padding: 0;
+}
+
+.contact__hours-item {
+  list-style: none;
+}
+
+.contact__address {
+  font-style: normal;
+}
+
+.contact__mail {
+  color: red;
+}
+
+.contact__phone {
+  color: red;
+}
+
+.contact__copyright {
+  background-color: rgba(0, 0, 0, 0.212);
+  width: 100%;
+  color: white;
+  padding: 2px;
+  margin: 2px;
+}
+
+.contact__author {
+  color: #ffad88;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */
