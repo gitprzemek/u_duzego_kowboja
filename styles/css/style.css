@@ -406,14 +406,19 @@ body * {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-image: url(../../images/plank.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .navigation__link {
   text-decoration: none;
-  text-shadow: -1px -1px 1px #ffe3e3;
+  text-shadow: 1px 1px 2px #c5c5c5;
   padding: 20px 0;
-  color: #a50000;
-  font-size: 45px;
+  color: black;
+  font-size: 50px;
+  font-weight: 700;
   position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 20%;
@@ -425,8 +430,8 @@ body * {
 }
 
 .navigation__link:hover {
-  color: #940a0a;
-  text-shadow: -1px -1px 1px #ffe3e3;
+  color: #a50000;
+  text-shadow: 2px 2px 3px #f7f7f7;
 }
 
 .navigation__link--logo {
@@ -482,7 +487,7 @@ body * {
 
 .about__container {
   width: 50%;
-  margin: 0 auto 0 20%;
+  margin: 0 auto 0 8%;
 }
 
 .about__local-img {
@@ -504,23 +509,50 @@ body * {
   color: #000000;
 }
 
-.about__btn-to-menu {
+.about__btn {
   display: inline-block;
   color: black;
   border: 2px solid #494949;
   padding: 5px 15px 0px;
-  margin-bottom: 40px;
+  margin: 10px 0 40px;
   font-size: 24px;
   text-decoration: none;
   font-family: "OldStandard-Regular";
 }
 
-.about__btn-to-menu:hover {
+.about__btn:hover {
   border: 2px solid #a50000;
   background-color: #a50000;
   color: white;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+}
+
+.about__btn--facebook {
+  float: right;
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.about__fb {
+  border: 2px solid #494949;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 25px;
+  line-height: 41px;
+  color: #494949;
+  background-color: rgba(66, 103, 178, 0);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.about__fb:hover {
+  color: white;
+  border: 2px solid #4267b2;
+  background-color: #4267b2;
 }
 
 .about__product-img1 {
@@ -538,9 +570,9 @@ body * {
 .about__product-img2 {
   position: absolute;
   height: auto;
-  width: 170px;
+  width: 220px;
   top: 120px;
-  left: 30px;
+  right: 230px;
 }
 
 .recommend {
@@ -768,6 +800,10 @@ body * {
   font-style: italic;
 }
 
+.menu__prod-price--pcs {
+  margin: 0 auto;
+}
+
 .delivery {
   width: 1200px;
   height: auto;
@@ -960,16 +996,21 @@ body * {
   list-style: none;
 }
 
+.contact__hours-title {
+  color: #a50000;
+  letter-spacing: 1px;
+}
+
 .contact__address {
   font-style: normal;
 }
 
 .contact__mail {
-  color: red;
+  color: white;
 }
 
 .contact__phone {
-  color: red;
+  color: white;
 }
 
 .contact__copyright {

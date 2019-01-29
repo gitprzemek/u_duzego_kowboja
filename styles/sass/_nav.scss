@@ -9,6 +9,10 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    background-image: url(../../images/plank.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     
 
     
@@ -16,10 +20,11 @@
 }
 .navigation__link{
     text-decoration: none;
-    text-shadow: -1px -1px 1px #ffe3e3;
+    text-shadow: 1px 1px 2px #c5c5c5;
     padding: 20px 0;
-    color: $red-color;
-    font-size: 45px;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-weight: 700;
     position: relative;
     // width: 20%;
     // display: inline-block;
@@ -28,8 +33,8 @@
     text-align: center;
 
     &:hover{
-        color: rgb(148, 10, 10);
-        text-shadow: -1px -1px 1px #ffe3e3;
+        color: $red-color;
+        text-shadow: 2px 2px 3px #f7f7f7;
     }
 }
 .navigation__link--logo{
