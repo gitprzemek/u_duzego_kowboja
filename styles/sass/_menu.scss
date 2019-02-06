@@ -13,12 +13,13 @@
     text-shadow: -1px 1px 1px #030303;
     position: relative;
     text-align: center;
+    display: inline-block;
     flex: 0 1 100%;
     &::before{
         content: "";
         position: absolute;
         height: 80px;
-        width: 340px;
+        width: 120%;
         background-image: url(../../images/deska.png);
         background-size: 100% 100%;
         background-position: center;
@@ -27,6 +28,12 @@
         top: 52%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @include phone{
+            width: 90%;
+        }
+    }
+    @include phone{
+        width: 100%;
     }
 }
 .menu__container{
@@ -46,7 +53,9 @@
     border: 1px solid rgba(255, 255, 255, 0.6);
     position: relative;
     padding: 40px;
-    
+    @include phone{
+        padding: 15px;
+    }
 }
 
 .menu__set-title
@@ -67,8 +76,8 @@ font-family: "WEST____";
     width: 350px;
     height: auto;
     @include phone{
-        top: -110px;
-        width: 320px;
+        top: -100px;
+        width: 250px;
     }
 }
 .menu__set-img--box{
@@ -76,7 +85,7 @@ font-family: "WEST____";
     top: -140px;
     @include phone{
         top: -180px;
-        width: 200px;
+        width: 180px;
     }
 }
 .menu__list{
@@ -97,6 +106,9 @@ font-family: "WEST____";
     margin: 0;
     padding: 0;
     @include title-color;
+    @include phone{
+        font-size: 20px;
+    }
     
 }
 .menu__prod-dots{
@@ -107,6 +119,7 @@ font-family: "WEST____";
   padding: 0 7px;
   position: relative;
   overflow: hidden;
+
   &::before{
           content: "...........................................................................................................................................................................................................................";
         letter-spacing: 11px;
@@ -116,12 +129,19 @@ font-family: "WEST____";
         position: absolute;
         bottom: 0;
         overflow: hidden;
+        @include phone{
+            letter-spacing: 8px;
+        }
+        
     }
   
 }
 .menu__prod-price{
     display: inline-block;
     @include title-color;
+    @include phone{
+        font-size: 20px;
+    }
 }
 .menu__prod-desc{
     display: block;
@@ -131,6 +151,9 @@ font-family: "WEST____";
     font-size: 20px;
     font-weight: 500;
     font-style: italic;
+    @include phone{
+        font-size: 16px;
+    }
 }
 .menu__prod-price--pcs{
     margin: 0 auto;

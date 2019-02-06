@@ -12,12 +12,13 @@
     color: $red-color;
     text-shadow: -1px 1px 1px #030303;
     position: relative;
+    display: inline-block;
     flex: 0 1 100%;
     &::before{
         content: "";
         position: absolute;
         height: 80px;
-        width: 500px;
+        width: 120%;
         background-image: url(../../images/deska.png);
         background-size: 100% 100%;
         background-position: center;
@@ -26,6 +27,13 @@
         top: 52%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @include phone{
+            width: 90%;
+        }
+    }
+    @include phone{
+        width: 100%;
+        font-size: 32px;
     }
 }
 .contact__container{
