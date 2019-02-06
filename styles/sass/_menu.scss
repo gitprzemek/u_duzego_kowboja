@@ -1,5 +1,5 @@
 .menu{
-    width: 1200px;
+    max-width: 1200px;
     height: auto;
     margin: 80px auto 20px;
     padding: 0;
@@ -56,6 +56,7 @@ font-family: "WEST____";
     font-size: 40px;
     color: $red-color;
     text-shadow: -1px 1px 1px #030303;
+    @include title-border;
 }
 
 .menu__set-img{
@@ -65,10 +66,18 @@ font-family: "WEST____";
     transform: translateX(-50%);
     width: 350px;
     height: auto;
+    @include phone{
+        top: -110px;
+        width: 320px;
+    }
 }
 .menu__set-img--box{
     width: 230px;
     top: -140px;
+    @include phone{
+        top: -180px;
+        width: 200px;
+    }
 }
 .menu__list{
     list-style: none;
@@ -87,7 +96,7 @@ font-family: "WEST____";
     display: inline-block;
     margin: 0;
     padding: 0;
-    
+    @include title-color;
     
 }
 .menu__prod-dots{
@@ -95,8 +104,9 @@ font-family: "WEST____";
 //   border-bottom: 2px dotted rgb(255, 255, 255);
 //   letter-spacing: 5px;
   margin: 0;
-  padding: 0 5px;
+  padding: 0 7px;
   position: relative;
+  overflow: hidden;
   &::before{
           content: "...........................................................................................................................................................................................................................";
         letter-spacing: 11px;
@@ -111,6 +121,7 @@ font-family: "WEST____";
 }
 .menu__prod-price{
     display: inline-block;
+    @include title-color;
 }
 .menu__prod-desc{
     display: block;

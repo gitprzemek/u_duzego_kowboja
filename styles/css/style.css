@@ -388,7 +388,7 @@ body * {
 }
 
 .navigation {
-  width: 1200px;
+  max-width: 1200px;
   height: 240px;
   margin: 0 auto;
   padding: 0px 5px;
@@ -410,6 +410,12 @@ body * {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navigation {
+    height: auto;
+  }
 }
 
 .navigation__link {
@@ -434,23 +440,62 @@ body * {
   text-shadow: 2px 2px 3px #f7f7f7;
 }
 
+@media only screen and (max-width: 1200px) {
+  .navigation__link {
+    padding: 5px 0;
+    font-size: 45px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .navigation__link--section {
+    display: none;
+  }
+}
+
 .navigation__link--logo {
   width: 220px;
   height: auto;
 }
 
+@media only screen and (max-width: 900px) {
+  .navigation__link--logo {
+    margin: 0 auto;
+  }
+}
+
 .navigation__logo-img {
-  width: auto;
-  height: 200px;
+  width: 90%;
+  height: auto;
 }
 
 .navigation__btn {
   display: none;
 }
 
+@media only screen and (max-width: 900px) {
+  .navigation__btn {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    height: 50px;
+    width: 50px;
+    font-size: 50px;
+    line-height: 50px;
+    padding: 0;
+    color: #a50000;
+    text-shadow: 2px 2px 1px #000000;
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+  }
+}
+
 .header {
   height: 400px;
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
   background-image: url(../../images/uduzegokowboja.png);
@@ -472,8 +517,26 @@ body * {
   background-position: bottom;
 }
 
+@media only screen and (max-width: 1200px) {
+  .header::before {
+    background-size: 85% auto;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .header {
+    height: 30vh;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .header {
+    height: 200px;
+  }
+}
+
 .about {
-  width: 1200px;
+  max-width: 1200px;
   height: auto;
   top: -30px;
   margin: 0px auto 10px;
@@ -490,9 +553,26 @@ body * {
   margin: 0 auto 0 8%;
 }
 
+@media only screen and (max-width: 700px) {
+  .about__container {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
 .about__local-img {
   margin: 40px 0 0px;
   width: 70%;
+  position: relative;
+}
+
+@media only screen and (max-width: 700px) {
+  .about__local-img {
+    margin: 40px 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 
 .about__title {
@@ -558,13 +638,23 @@ body * {
 .about__product-img1 {
   position: absolute;
   height: auto;
-  width: 370px;
-  bottom: 21%;
-  right: -10px;
-  -webkit-transform: rotate(-40deg);
-          transform: rotate(-40deg);
+  width: 250px;
+  bottom: 11%;
+  right: 45px;
   -webkit-filter: drop-shadow(-3px 1px 15px #222);
   filter: drop-shadow(0px 5px 10px rgba(34, 34, 34, 0.5));
+}
+
+@media only screen and (max-width: 900px) {
+  .about__product-img1 {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .about__product-img1 {
+    display: none;
+  }
 }
 
 .about__product-img2 {
@@ -575,8 +665,21 @@ body * {
   right: 230px;
 }
 
+@media only screen and (max-width: 900px) {
+  .about__product-img2 {
+    width: 170px;
+    right: 150px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .about__product-img2 {
+    display: none;
+  }
+}
+
 .recommend {
-  width: 1200px;
+  max-width: 1200px;
   height: auto;
   margin: 0 auto 20px;
   padding: 0;
@@ -634,6 +737,23 @@ body * {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+@media only screen and (max-width: 900px) {
+  .recommend__product {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 45%;
+            flex: 0 1 45%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .recommend__product {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 90%;
+            flex: 0 1 90%;
+    margin: 10px auto;
+  }
+}
+
 .recommend__frame {
   height: 100%;
   width: 100%;
@@ -641,25 +761,28 @@ body * {
 }
 
 .recommend__prod-img {
-  height: 200px;
-  width: auto;
+  height: auto;
+  width: 90%;
   margin: 15px auto;
 }
 
 .recommend__prod-name {
   font-size: 34px;
   margin: 10px auto;
+  background: -webkit-linear-gradient(#fdf8c8 0%, #ec8201 62%, #e50013 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .recommend__prod-desc {
   font-family: "Arvo";
   font-size: 18px;
   margin: 2px auto 10px;
-  padding: 0 10px;
+  padding: 0 10px 10px;
 }
 
 .menu {
-  width: 1200px;
+  max-width: 1200px;
   height: auto;
   margin: 80px auto 20px;
   padding: 0;
@@ -720,6 +843,7 @@ body * {
   font-size: 40px;
   color: #a50000;
   text-shadow: -1px 1px 1px #030303;
+  text-shadow: 0px 1px 1px white;
 }
 
 .menu__set-img {
@@ -732,9 +856,23 @@ body * {
   height: auto;
 }
 
+@media only screen and (max-width: 700px) {
+  .menu__set-img {
+    top: -110px;
+    width: 320px;
+  }
+}
+
 .menu__set-img--box {
   width: 230px;
   top: -140px;
+}
+
+@media only screen and (max-width: 700px) {
+  .menu__set-img--box {
+    top: -180px;
+    width: 200px;
+  }
 }
 
 .menu__list {
@@ -762,6 +900,9 @@ body * {
   display: inline-block;
   margin: 0;
   padding: 0;
+  background: -webkit-linear-gradient(#fdf8c8 0%, #ec8201 62%, #e50013 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .menu__prod-dots {
@@ -769,8 +910,9 @@ body * {
       -ms-flex: 1;
           flex: 1;
   margin: 0;
-  padding: 0 5px;
+  padding: 0 7px;
   position: relative;
+  overflow: hidden;
 }
 
 .menu__prod-dots::before {
@@ -786,6 +928,9 @@ body * {
 
 .menu__prod-price {
   display: inline-block;
+  background: -webkit-linear-gradient(#fdf8c8 0%, #ec8201 62%, #e50013 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .menu__prod-desc {
@@ -805,7 +950,7 @@ body * {
 }
 
 .delivery {
-  width: 1200px;
+  max-width: 1200px;
   height: auto;
   margin: 80px auto 120px;
   padding: 0;
@@ -920,7 +1065,7 @@ body * {
 }
 
 .contact {
-  width: 1200px;
+  max-width: 1200px;
   height: auto;
   margin: 80px auto 0px;
   padding: 0;

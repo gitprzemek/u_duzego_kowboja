@@ -1,5 +1,5 @@
 .navigation {
-    width: 1200px;
+    max-width: 1200px;
     height: 240px;
     margin: 0 auto;
     padding: 0px 5px;
@@ -14,7 +14,9 @@
     background-size: contain;
     background-repeat: no-repeat;
     
-
+    @include tablets{
+        height: auto;
+    }
     
     
 }
@@ -36,16 +38,44 @@
         color: $red-color;
         text-shadow: 2px 2px 3px #f7f7f7;
     }
+    @include tablets{
+        padding: 5px 0;
+        font-size: 45px;
+    }
+    
+}
+.navigation__link--section{
+    @include small-tablets{
+        display: none;
+    }
 }
 .navigation__link--logo{
     width: 220px;
     height: auto;
-
+    @include small-tablets{
+        margin: 0 auto;
+    }
 }
 .navigation__logo-img{
-    width: auto;
-    height: 200px;
+    width: 90%;
+    height: auto;
 }
 .navigation__btn{
     display: none;
+    @include small-tablets{
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translate(-50%, -50%);
+        height: 50px;
+        width: 50px;
+        font-size: 50px;
+        line-height: 50px;
+        padding: 0;
+        color: $red-color;
+        text-shadow: 2px 2px 1px #000000;
+        background-color: rgba(255, 0, 0, 0);
+        border: none;
+    }
 }

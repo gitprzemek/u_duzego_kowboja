@@ -1,6 +1,6 @@
 .header{
     height: 400px;
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     position: relative;
     background-image: url(../../images/uduzegokowboja.png);
@@ -9,6 +9,7 @@
     background-position: bottom;
     background-size: 95% auto;
     background-repeat: no-repeat;
+    
     &::before{
         content: "";
         position: absolute;
@@ -22,6 +23,15 @@
         background-repeat: no-repeat;
         background-size: 85% 90%;
         background-position: bottom;
+        @include tablets{
+            background-size: 85% auto;
+        }
     
+    }
+    @include tablets{
+        height: 30vh;
+    }
+    @include small-tablets{
+        height: 200px;
     }
 }
