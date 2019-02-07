@@ -4,22 +4,15 @@
     margin: 80px auto 20px;
     padding: 0;
     position: relative;
-    text-align: left;
+    text-align: center;
 }
 .menu__title{
-    font-family: "WEST____";
-    font-size: 50px;
-    color: $red-color;
-    text-shadow: -1px 1px 1px #030303;
-    position: relative;
-    text-align: center;
-    display: inline-block;
-    flex: 0 1 100%;
+    @include title-style;
     &::before{
         content: "";
         position: absolute;
         height: 80px;
-        width: 120%;
+        width: 150%;
         background-image: url(../../images/deska.png);
         background-size: 100% 100%;
         background-position: center;
@@ -29,11 +22,11 @@
         left: 50%;
         transform: translate(-50%, -50%);
         @include phone{
-            width: 90%;
+            // width: 90%;
         }
     }
     @include phone{
-        width: 100%;
+        font-size: 40px;
     }
 }
 .menu__container{
@@ -45,6 +38,7 @@
     margin: 120px auto 60px;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
+    text-align: left;
 }
 
 .menu__frame{
@@ -100,6 +94,9 @@ font-family: "WEST____";
     margin: 30px 0 0;
     font-size: 24px;
     font-weight: bold;
+    @include phone{
+        margin: 10px 0 0;
+    }
 }
 .menu__prod-name{
     display: inline-block;
@@ -152,9 +149,13 @@ font-family: "WEST____";
     font-weight: 500;
     font-style: italic;
     @include phone{
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 .menu__prod-price--pcs{
     margin: 0 auto;
+    @include phone{
+        font-size: 15px;
+        line-height: 23px;
+    }
 }

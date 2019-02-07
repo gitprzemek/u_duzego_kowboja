@@ -5,27 +5,21 @@
     padding: 0;
     position: relative;
     text-align: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: center;
     font-family: "WEST____";
     // background-color: rgba(0, 0, 0, 0.5);
 }
 .recommend__title{
-    font-family: "WEST____";
-    font-size: 50px;
-    color: $red-color;
-    text-shadow: -1px 1px 1px #030303;
-    position: relative;
-    display: inline-block;
-    margin: 20px auto;
-    flex: 0 1 100%;
+    @include title-style;
     
     &::before{
         content: "";
         position: absolute;
         height: 80px;
-        width: 460px;
+        width: 150%;
         background-image: url(../../images/deska.png);
         background-size: 100% 100%;
         background-position: center;
@@ -35,12 +29,19 @@
         left: 50%;
         transform: translate(-50%, -50%);
         @include phone{
-            width: 90%;
+            // width: 90%;
         }
     }
     @include phone{
-        width: 100%;
+        // width: 100%;
+        font-size: 40px;
     }
+}
+.recommend-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .recommend__product{
     position: relative;
@@ -68,6 +69,9 @@
     height: auto;
     width: 90%;
     margin: 15px auto;
+    @include phone{
+        width: 70%;
+    }
 
 }
 .recommend__prod-name{

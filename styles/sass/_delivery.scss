@@ -6,20 +6,18 @@
     padding: 0;
     position: relative;
     text-align: center;
+    @include phone{
+        margin: 10px auto;
+    }
 }
 .delivery__title{
-    font-family: "WEST____";
-    font-size: 40px;
-    color: $red-color;
-    text-shadow: -1px 1px 1px #030303;
-    position: relative;
-    display: inline-block;
-    flex: 0 1 100%;
+    @include title-style;
+    
     &::before{
         content: "";
         position: absolute;
         height: 80px;
-        width: 120%;
+        width: 110%;
         background-image: url(../../images/deska.png);
         background-size: 100% 100%;
         background-position: center;
@@ -28,12 +26,11 @@
         top: 52%;
         left: 50%;
         transform: translate(-50%, -50%);
-        @include phone{
-            width: 90%;
-        }
+        
     }
     @include phone{
-        width:100%;
+        font-size: 30px;
+        margin: 0 20px;
     }
     
 }
@@ -43,15 +40,21 @@
     height: 100%;
     width: 100%;
     padding: 50px;
-    margin: 100px auto 100px;
+    margin: 100px auto;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
+    
+    @include phone{
+        margin: 50px auto;
+        flex-wrap: wrap;
+        padding: 30px 10px;
+    }
 }
-.delivery__title{
-    margin: 40px 0;
-    flex: 0 1 100%;
-}
+// .delivery__title{
+//     margin: 40px 0;
+//     flex: 0 1 100%;
+// }
 .delivery__cont-about{
     font-size: 24px;
     flex: 0 1 60%;
@@ -60,6 +63,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include phone{
+        flex: 0 1 100%;
+        order: 2;
+    }
 }
 .delivery__desc{
     font-family: "WEST____";
@@ -68,24 +75,37 @@
 }
 .delivery__desc-gratis{
     font-style: italic;
+    @include phone{
+        font-size: 20px;
+        line-height: 28px;
+    }
 }
 .delivery__phone{
     text-decoration: none;
     font-weight: 700;
     color: rgb(165, 0, 0);
     text-shadow: -1px 1px 1px #fafafa;
+    white-space: nowrap;
 }
 .delivery__cont-cash{
     flex: 0 1 40%;
     display: flex;
     align-content: center;
     align-items: center;
+    @include phone{
+        flex: 0 1 100%;
+        order: 1;
+    }
 
 }
 .delivery__cash-img{
     width: 70%;
+    min-width: 180px;
     height: auto;
     margin: 0 auto;
+    @include phone{
+        width: 60%;
+    }
 }
 .delivery__cash-desc{
     

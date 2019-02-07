@@ -9,6 +9,9 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
+    @include phone{
+        padding: 20px 20px;
+    }
     
 }
 .about__container{
@@ -24,7 +27,8 @@
     width: 70%;
     position: relative;
     @include phone{
-        margin: 40px 0;
+        width: 90%;
+        margin: 40px 0 10px;
         left: 50%;
         transform: translateX(-50%);
 

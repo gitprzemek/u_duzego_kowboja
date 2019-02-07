@@ -34,4 +34,7 @@
     @include small-tablets{
         height: 200px;
     }
+    @include phone{
+        height: 20vh;
+    }
 }

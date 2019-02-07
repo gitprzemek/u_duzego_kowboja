@@ -460,6 +460,14 @@ body * {
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  .navigation__link--section {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 15%;
+            flex: 0 0 15%;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .navigation__link--section {
     display: none;
@@ -502,16 +510,33 @@ body * {
     right: 0px;
     -webkit-transform: translate(-50%, -51%);
             transform: translate(-50%, -51%);
-    height: 50px;
-    width: 50px;
-    font-size: 50px;
-    line-height: 50px;
+    height: 45px;
+    width: 45px;
+    font-size: 45px;
+    line-height: 45px;
     padding: 0;
-    color: #080808;
-    text-shadow: 0px 1px 1px #aaaaaa;
+    color: #df1308;
+    text-shadow: 2px 2px 1px #000000;
     background-color: rgba(255, 0, 0, 0);
     border: none;
   }
+}
+
+.navigation__btn-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  line-height: 20px;
+  background-color: #a50000;
+  color: white;
+  border: none;
+  z-index: 999;
+  display: none;
+  overflow: hidden;
+  opacity: 0.9;
 }
 
 .header {
@@ -556,6 +581,12 @@ body * {
   }
 }
 
+@media only screen and (max-width: 700px) {
+  .header {
+    height: 20vh;
+  }
+}
+
 .about {
   max-width: 1200px;
   height: auto;
@@ -567,6 +598,12 @@ body * {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .about {
+    padding: 20px 20px;
+  }
 }
 
 .about__container {
@@ -589,7 +626,8 @@ body * {
 
 @media only screen and (max-width: 700px) {
   .about__local-img {
-    margin: 40px 0;
+    width: 90%;
+    margin: 40px 0 10px;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -706,15 +744,6 @@ body * {
   padding: 0;
   position: relative;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   font-family: "WEST____";
 }
 
@@ -724,18 +753,16 @@ body * {
   color: #a50000;
   text-shadow: -1px 1px 1px #030303;
   position: relative;
+  text-align: center;
   display: inline-block;
   margin: 20px auto;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
 }
 
 .recommend__title::before {
   content: "";
   position: absolute;
   height: 80px;
-  width: 460px;
+  width: 150%;
   background-image: url(../../images/deska.png);
   background-size: 100% 100%;
   background-position: center;
@@ -748,15 +775,24 @@ body * {
 }
 
 @media only screen and (max-width: 700px) {
-  .recommend__title::before {
-    width: 90%;
+  .recommend__title {
+    font-size: 40px;
   }
 }
 
-@media only screen and (max-width: 700px) {
-  .recommend__title {
-    width: 100%;
-  }
+.recommend-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .recommend__product {
@@ -801,6 +837,12 @@ body * {
   margin: 15px auto;
 }
 
+@media only screen and (max-width: 700px) {
+  .recommend__prod-img {
+    width: 70%;
+  }
+}
+
 .recommend__prod-name {
   font-size: 34px;
   margin: 10px auto;
@@ -822,7 +864,7 @@ body * {
   margin: 80px auto 20px;
   padding: 0;
   position: relative;
-  text-align: left;
+  text-align: center;
 }
 
 .menu__title {
@@ -833,16 +875,14 @@ body * {
   position: relative;
   text-align: center;
   display: inline-block;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
+  margin: 20px auto;
 }
 
 .menu__title::before {
   content: "";
   position: absolute;
   height: 80px;
-  width: 120%;
+  width: 150%;
   background-image: url(../../images/deska.png);
   background-size: 100% 100%;
   background-position: center;
@@ -855,14 +895,8 @@ body * {
 }
 
 @media only screen and (max-width: 700px) {
-  .menu__title::before {
-    width: 90%;
-  }
-}
-
-@media only screen and (max-width: 700px) {
   .menu__title {
-    width: 100%;
+    font-size: 40px;
   }
 }
 
@@ -875,6 +909,7 @@ body * {
   margin: 120px auto 60px;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
+  text-align: left;
 }
 
 .menu__frame {
@@ -950,6 +985,12 @@ body * {
   font-weight: bold;
 }
 
+@media only screen and (max-width: 700px) {
+  .menu__item {
+    margin: 10px 0 0;
+  }
+}
+
 .menu__prod-name {
   display: inline-block;
   margin: 0;
@@ -1019,12 +1060,19 @@ body * {
 
 @media only screen and (max-width: 700px) {
   .menu__prod-desc {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
 .menu__prod-price--pcs {
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 700px) {
+  .menu__prod-price--pcs {
+    font-size: 15px;
+    line-height: 23px;
+  }
 }
 
 .delivery {
@@ -1036,23 +1084,28 @@ body * {
   text-align: center;
 }
 
+@media only screen and (max-width: 700px) {
+  .delivery {
+    margin: 10px auto;
+  }
+}
+
 .delivery__title {
   font-family: "WEST____";
-  font-size: 40px;
+  font-size: 50px;
   color: #a50000;
   text-shadow: -1px 1px 1px #030303;
   position: relative;
+  text-align: center;
   display: inline-block;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
+  margin: 20px auto;
 }
 
 .delivery__title::before {
   content: "";
   position: absolute;
   height: 80px;
-  width: 120%;
+  width: 110%;
   background-image: url(../../images/deska.png);
   background-size: 100% 100%;
   background-position: center;
@@ -1065,14 +1118,9 @@ body * {
 }
 
 @media only screen and (max-width: 700px) {
-  .delivery__title::before {
-    width: 90%;
-  }
-}
-
-@media only screen and (max-width: 700px) {
   .delivery__title {
-    width: 100%;
+    font-size: 30px;
+    margin: 0 20px;
   }
 }
 
@@ -1082,7 +1130,7 @@ body * {
   height: 100%;
   width: 100%;
   padding: 50px;
-  margin: 100px auto 100px;
+  margin: 100px auto;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
   display: -webkit-box;
@@ -1090,11 +1138,13 @@ body * {
   display: flex;
 }
 
-.delivery__title {
-  margin: 40px 0;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
+@media only screen and (max-width: 700px) {
+  .delivery__container {
+    margin: 50px auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 30px 10px;
+  }
 }
 
 .delivery__cont-about {
@@ -1118,6 +1168,17 @@ body * {
           align-items: center;
 }
 
+@media only screen and (max-width: 700px) {
+  .delivery__cont-about {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 .delivery__desc {
   font-family: "WEST____";
   font-size: 38px;
@@ -1128,11 +1189,19 @@ body * {
   font-style: italic;
 }
 
+@media only screen and (max-width: 700px) {
+  .delivery__desc-gratis {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
 .delivery__phone {
   text-decoration: none;
   font-weight: 700;
   color: #a50000;
   text-shadow: -1px 1px 1px #fafafa;
+  white-space: nowrap;
 }
 
 .delivery__cont-cash {
@@ -1149,10 +1218,28 @@ body * {
           align-items: center;
 }
 
+@media only screen and (max-width: 700px) {
+  .delivery__cont-cash {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
 .delivery__cash-img {
   width: 70%;
+  min-width: 180px;
   height: auto;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 700px) {
+  .delivery__cash-img {
+    width: 60%;
+  }
 }
 
 .contact {
@@ -1164,23 +1251,28 @@ body * {
   text-align: center;
 }
 
+@media only screen and (max-width: 700px) {
+  .contact {
+    margin: 10px auto 0px;
+  }
+}
+
 .contact__title {
   font-family: "WEST____";
-  font-size: 40px;
+  font-size: 50px;
   color: #a50000;
   text-shadow: -1px 1px 1px #030303;
   position: relative;
+  text-align: center;
   display: inline-block;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
+  margin: 20px auto;
 }
 
 .contact__title::before {
   content: "";
   position: absolute;
   height: 80px;
-  width: 120%;
+  width: 110%;
   background-image: url(../../images/deska.png);
   background-size: 100% 100%;
   background-position: center;
@@ -1193,15 +1285,9 @@ body * {
 }
 
 @media only screen and (max-width: 700px) {
-  .contact__title::before {
-    width: 90%;
-  }
-}
-
-@media only screen and (max-width: 700px) {
   .contact__title {
-    width: 100%;
-    font-size: 32px;
+    font-size: 30px;
+    margin: 0 20px;
   }
 }
 
@@ -1225,6 +1311,15 @@ body * {
           flex-direction: row;
 }
 
+@media only screen and (max-width: 700px) {
+  .contact__container {
+    margin: 50px auto 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 20px;
+  }
+}
+
 .contact__element {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
@@ -1233,13 +1328,39 @@ body * {
   position: relative;
 }
 
+@media only screen and (max-width: 700px) {
+  .contact__element {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+}
+
 .contact__element--map {
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
+@media only screen and (max-width: 700px) {
+  .contact__element--map {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .contact__hours-title {
+    margin: 10px auto;
+  }
+}
+
 .contact__hours-list {
   padding: 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .contact__hours-list {
+    margin: 10px auto;
+  }
 }
 
 .contact__hours-item {
