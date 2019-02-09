@@ -452,13 +452,15 @@ body * {
 
 @media only screen and (max-width: 900px) {
   .navigation__container {
-    display: none;
+    top: -500px;
   }
 }
 
 .navigation__container--active {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   display: block;
-  position: absolute;
+  position: fixed;
   z-index: 999;
   top: 0;
   left: 0;
@@ -574,6 +576,10 @@ body * {
     text-shadow: 2px 2px 1px #000000;
     border: none;
   }
+  .navigation__btn--active {
+    z-index: 9999;
+    text-shadow: 2px 2px 3px #f7f7f7;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -601,7 +607,7 @@ body * {
 .navigation__btn-to-top {
   position: fixed;
   bottom: 10px;
-  right: 10px;
+  left: 10px;
   width: 50px;
   height: 50px;
   font-size: 50px;
@@ -613,10 +619,6 @@ body * {
   display: none;
   overflow: hidden;
   opacity: 0.9;
-}
-
-.navigation__btn--close {
-  display: none;
 }
 
 .header {

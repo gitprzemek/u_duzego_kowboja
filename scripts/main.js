@@ -1,4 +1,7 @@
 $(document).ready(function (){
+    const linkList = document.getElementsByClassName("navigation__link");
+
+
     $("#link-about").click(function (){
         $('html, body').animate({
             scrollTop: $("#about").offset().top
@@ -41,7 +44,12 @@ $(document).ready(function (){
     });
 
     $('.navigation__btn--burger').click(function(){
-        $(".navigation__container").toggleClass("navigation__container--active")
+        $(".navigation__container").toggleClass("navigation__container--active");
+        $(".navigation__btn--burger").toggleClass("navigation__btn--active");
     });
-    
-});
+    $('.navigation__link').click(function(){
+        $(".navigation__container--active").toggleClass("navigation__container--active");
+        $(".navigation__btn--active").toggleClass("navigation__btn--active");
+    });
+
+})

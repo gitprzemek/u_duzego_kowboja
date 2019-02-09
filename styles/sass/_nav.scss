@@ -38,15 +38,17 @@
     flex-wrap: nowrap;
     justify-content: space-evenly;
     
+    
     @include tablets{
         transform: translateY(0%);
     }
     @include small-tablets{
-        display: none;
+        top: -500px;
     }
     &--active{
+        transition: all 0.3s linear;
         display: block;
-        position:absolute;
+        position: fixed;
         z-index: 999;
         top: 0;
         left: 0;
@@ -64,11 +66,11 @@
         text-shadow: 2px 2px 3px #f7f7f7;
         display: flex;
         align-content: center;
-        &--empty{
-    
-            display: none;
+            &--empty{
         
-    }
+                display: none;
+            
+            }
         }
         
     }
@@ -135,6 +137,10 @@
         padding: 0;
         text-shadow: 2px 2px 1px #000000;
         border: none;
+        &--active{
+            z-index: 9999;
+            text-shadow: 2px 2px 3px #f7f7f7;
+        }
     }
 }
 .navigation__btn--phone{
@@ -159,7 +165,7 @@
 .navigation__btn-to-top{
     position: fixed;
     bottom: 10px;
-    right: 10px;
+    left: 10px;
     width: 50px;
     height: 50px;
     font-size: 50px;
@@ -171,7 +177,4 @@
     display: none;
     overflow: hidden;
     opacity: 0.9;
-}
-.navigation__btn--close{
-    display: none;
 }
