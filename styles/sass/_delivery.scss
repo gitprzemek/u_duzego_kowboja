@@ -72,6 +72,7 @@
     font-family: "WEST____";
     font-size: 38px;
     margin: 10px auto;
+    position: relative;
 }
 .delivery__desc-gratis{
     font-style: italic;
@@ -80,12 +81,29 @@
         line-height: 28px;
     }
 }
+
 .delivery__phone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     font-weight: 700;
     color: rgb(165, 0, 0);
     text-shadow: -1px 1px 1px #fafafa;
     white-space: nowrap;
+}
+.delivery__icon{
+    display: inline-block;
+    align-self: center;
+    width: 38px;
+    height: 38px;
+    margin: 6px 7px;
+    font-size: 20px;
+    line-height: 38px;
+    border: none;
+    border-radius: 50%;
+    background-color:rgb(165, 0, 0);
+    color: white;
 }
 .delivery__cont-cash{
     flex: 0 1 40%;

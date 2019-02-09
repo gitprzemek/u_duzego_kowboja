@@ -14,6 +14,11 @@ $(document).ready(function (){
             scrollTop: $("#delivery").offset().top
         }, 500);
     });
+    $("#link-delivery-m").click(function (){
+        $('html, body').animate({
+            scrollTop: $("#delivery").offset().top
+        }, 500);
+    });
     $("#link-contact").click(function (){
         $('html, body').animate({
             scrollTop: $("#contact").offset().top
@@ -33,6 +38,10 @@ $(document).ready(function (){
     $('.navigation__btn-to-top').click(function(){
         $('html, body').animate({scrollTop : 0},800);
         return false;
+    });
+
+    $('.navigation__btn--burger').click(function(){
+        $(".navigation__container").toggleClass("navigation__container--active")
     });
     
 });
