@@ -53,7 +53,7 @@
         height: 100vh;
         padding: 0;
         margin: 0;
-        background-color: #000000da;
+        background-color: rgba(0, 0, 0, 0.855);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -143,6 +143,7 @@
             z-index: 9999;
             text-shadow: 2px 2px 3px #f7f7f7;
         }
+        
     }
 }
 .navigation__btn--phone{
@@ -162,7 +163,9 @@
         right: 20px;
         color: #df1308;
         background-color: rgba(255, 0, 0, 0);
+        
     }
+    
 }
 .navigation__btn-to-top{
     position: fixed;
