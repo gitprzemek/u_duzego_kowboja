@@ -344,6 +344,7 @@ template {
 @font-face {
   font-family: "WEST____";
   src: url(../fonts/WEST____.TTF);
+  font-display: auto;
   font-weight: 700;
   font-style: normal;
 }
@@ -351,6 +352,7 @@ template {
 @font-face {
   font-family: "OldStandard-Regular";
   src: url(../fonts/OldStandard-Regular.ttf);
+  font-display: auto;
   font-weight: 700;
   font-style: normal;
 }
@@ -358,6 +360,7 @@ template {
 @font-face {
   font-family: "Arvo";
   src: url(../fonts/Arvo-Regular.ttf);
+  font-display: auto;
   font-weight: 500;
   font-style: normal;
 }
