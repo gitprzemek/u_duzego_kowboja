@@ -43,14 +43,11 @@
         transform: translateY(0%);
     }
     @include small-tablets{
-        top: -500px;
-    }
-    &--active{
+        top: -100vh;
         transition: all 0.3s linear;
         display: block;
-        position: fixed;
+        position: absolute;
         z-index: 999;
-        top: 0;
         left: 0;
         // width: 100%;
         height: 100vh;
@@ -58,21 +55,26 @@
         margin: 0;
         background-color: #000000da;
         display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        .navigation__link{
-            color: $red-color;
-        text-shadow: 2px 2px 3px #f7f7f7;
-        display: flex;
-        align-content: center;
-            &--empty{
-        
-                display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+            .navigation__link{
+                color: $red-color;
+            text-shadow: 2px 2px 3px #f7f7f7;
+            display: flex;
+            align-content: center;
+                &--empty{
             
+                    display: none;
+                
+                }
             }
-        }
         
+    }
+    &--active{
+        position: fixed;
+        top: 0px;
+        height: 100vh;
     }
 }
 
