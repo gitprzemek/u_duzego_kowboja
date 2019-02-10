@@ -356,13 +356,6 @@ template {
 }
 
 @font-face {
-  font-family: "AKENATEN";
-  src: url(../fonts/AKENATEN.TTF);
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Arvo";
   src: url(../fonts/Arvo-Regular.ttf);
   font-weight: 500;
@@ -607,7 +600,7 @@ body * {
 .navigation__btn-to-top {
   position: fixed;
   bottom: 10px;
-  right: 15px;
+  right: 10px;
   width: 50px;
   height: 50px;
   font-size: 50px;
@@ -619,6 +612,79 @@ body * {
   display: none;
   overflow: hidden;
   opacity: 0.9;
+}
+
+#cookieinfo * {
+  margin: 0px;
+  padding: 0px;
+}
+
+#cookieinfo {
+  position: fixed;
+  font-family: Arial, Verdana, sans-serif;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-color: #111111;
+  padding: 20px;
+  z-index: 10000;
+  text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+  #cookieinfo {
+    padding: 10px;
+  }
+}
+
+#cookieinfo p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 700px) {
+  #cookieinfo p {
+    font-size: 12px;
+  }
+}
+
+#cookieinfo a {
+  border-radius: 11px;
+  line-height: 22px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 700px) {
+  #cookieinfo a {
+    font-size: 12px;
+  }
+}
+
+#cookieinfo button {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 30px;
+  margin: 0 10px;
+  background-color: #a50000;
+  line-height: 16px;
+  font-size: 16px;
+  color: #ffffff;
+  border: none;
+}
+
+@media only screen and (max-width: 700px) {
+  #cookieinfo button {
+    display: block;
+    margin: 5px auto;
+  }
+}
+
+#cookieinfo button:hover {
+  background-color: #ff5100;
 }
 
 .header {

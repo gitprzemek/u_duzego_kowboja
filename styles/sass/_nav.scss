@@ -167,7 +167,7 @@
 .navigation__btn-to-top{
     position: fixed;
     bottom: 10px;
-    right: 15px;
+    right: 10px;
     width: 50px;
     height: 50px;
     font-size: 50px;
@@ -179,4 +179,67 @@
     display: none;
     overflow: hidden;
     opacity: 0.9;
+}
+// COOKIE-ALERT STYLES
+#cookieinfo * {
+    margin: 0px;
+    padding: 0px;
+}
+
+#cookieinfo {
+    position: fixed;
+    font-family: Arial, Verdana, sans-serif;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: #111111;
+    padding: 20px;
+    z-index: 10000;
+    text-align: center;
+    @include phone{
+        padding: 10px;
+    }
+}
+
+#cookieinfo p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    display: inline-block;
+    @include phone{
+        font-size: 12px;
+    }
+}
+
+#cookieinfo a {
+    border-radius: 11px;
+    line-height: 22px;
+    font-size: 16px;
+    color: #ffffff;
+    @include phone{
+        font-size: 12px;
+    }
+}
+
+#cookieinfo button {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 30px;
+    // top: 50%;
+    margin: 0 10px;
+    // transform: translateY(-50%);
+    background-color: $red-color;
+    line-height: 16px;
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
+    @include phone{
+        display: block;
+        margin: 5px auto;
+    }
+}
+
+#cookieinfo button:hover {
+    background-color: #ff5100;
 }
