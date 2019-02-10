@@ -12,6 +12,11 @@ $(document).ready(function (){
             scrollTop: $("#menu").offset().top
         }, 500);
     });
+    $(".about__btn--menu").click(function (){
+        $('html, body').animate({
+            scrollTop: $("#menu").offset().top
+        }, 500);
+    });
     $("#link-delivery").click(function (){
         $('html, body').animate({
             scrollTop: $("#delivery").offset().top

@@ -73,6 +73,7 @@
     font-size: 38px;
     margin: 10px auto;
     position: relative;
+    @include title-color;
 }
 .delivery__desc-gratis{
     font-style: italic;
@@ -83,6 +84,8 @@
 }
 
 .delivery__phone{
+    font-family: "WEST____";
+    font-size: 38px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -51,6 +51,9 @@ box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.75);
         margin: 50px auto 0;
         flex-wrap: wrap;
         padding: 20px;
+        -webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow: none;
     }
 }
 .contact__element{
@@ -101,7 +104,7 @@ box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.75);
 }
 .contact__copyright{
     background-color: rgba(0, 0, 0, 0.212);
-    width: 100%;
+    // width: auto;
     color: white;
     padding: 2px;
     margin: 2px;
