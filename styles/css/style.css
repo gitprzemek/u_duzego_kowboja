@@ -533,7 +533,7 @@ body * {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: auto;
-  width: 200px;
+  width: 250px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -573,6 +573,8 @@ body * {
     border: none;
   }
   .navigation__btn--active {
+    position: fixed;
+    top: 75px;
     z-index: 9999;
     text-shadow: 2px 2px 3px #f7f7f7;
   }
@@ -691,9 +693,9 @@ body * {
 }
 
 .header {
-  height: 400px;
+  height: 300px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: -30px auto 0;
   position: relative;
   background-image: url(../../images/uduzegokowboja.png);
   background-position: bottom;
@@ -710,7 +712,7 @@ body * {
   z-index: -1;
   background-image: url(../../images/flame.png);
   background-repeat: no-repeat;
-  background-size: 85% 90%;
+  background-size: 85% 100%;
   background-position: bottom;
 }
 
@@ -722,7 +724,8 @@ body * {
 
 @media only screen and (max-width: 1200px) {
   .header {
-    height: 30vh;
+    margin: 0 auto 0;
+    height: 250px;
   }
 }
 
@@ -734,7 +737,13 @@ body * {
 
 @media only screen and (max-width: 700px) {
   .header {
-    height: 20vh;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .header {
+    height: 100px;
   }
 }
 

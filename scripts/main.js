@@ -53,8 +53,8 @@ $(document).ready(function (){
         $(".navigation__btn--burger").toggleClass("navigation__btn--active");
     });
     $('.navigation__link').click(function(){
-        $(".navigation__container").toggleClass("navigation__container--active");
-        $(".navigation__btn").toggleClass("navigation__btn--active");
+        $(".navigation__container").removeClass("navigation__container--active");
+        $(".navigation__btn").removeClass("navigation__btn--active");
     });
 
 
